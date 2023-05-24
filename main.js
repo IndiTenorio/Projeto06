@@ -15,7 +15,7 @@ function rodar() {
 }
 
 
-function trocarTelas() {
+function trocarTelas1e2() {
   screen1.classList.toggle("hide")
   screen2.classList.toggle("hide")
 }
@@ -25,11 +25,10 @@ function trocarTelas1e3() {
   screen3.classList.toggle("hide")
 }
 
-
 function clicou(evento) {
   evento.preventDefault()
   if (Number(campoNumero.value) === numeroAleatorio) {
-    trocarTelas()
+    trocarTelas1e2()
     titulo.innerHTML = `Parabéns, você acertou em ${tentativas} tentativa(s)`
     campoNumero.value = ""
     rodar()
@@ -41,11 +40,9 @@ function clicou(evento) {
   }
 }
 
-
 function jogarNovamente(evento) {
-  trocarTelas()
+  trocarTelas1e2()
 }
-
 
 function errou(event) {
   event.preventDefault()
