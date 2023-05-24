@@ -15,26 +15,32 @@
 </head>
 
 <body>
-  <main>
+  <main id="main">
 
-    <div class="screen1 hide">
+    <div class="screen1">
       <h1>Jogo da Adivinhação</h1>
       <p>Adivinhe um número entre 0 e 10</p>
 
       <form>
-        <input type="number">
-        <button>Tentar</button>
+        <input id="campoNumero" type="number">
+        <button id="tentar" onclick="clicou(event)">Tentar</button>
       </form>
     </div>
 
 
-    <div class="screen2">
-      <h2>Acertou em 3 vezes</h2>
-      <button>Jogar novamente</button>
+    <div class="screen2 hide">
+      <h2 id="tituloScreen2"></h2>
+      <button id="jogar" onclick="jogarNovamente(event)">Jogar novamente</button>
+    </div>
+
+
+    <div class="screen3 hide">
+      <h2 id="tituloScreen3">☹️ </h2>
+      <button id="tentar-novamente" onclick="errou(event)">Tentei outra vez</button>
     </div>
 
   </main>
-
+  <script src="./main.js"></script>
 </body>
 
 </html>
